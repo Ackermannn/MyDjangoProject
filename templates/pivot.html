@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="CN-ch">
+<head>
+    <meta charset="UTF-8">
+    <title>行专列</title>
+</head>
+<body>
+<h1>行专列</h1>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    一些说明： <br/>
+    1.文件需要为csv 文件 <br/>
+    2. 文件中必须要有collect_value、collect_name、proc_time 这三个列名<br/>
+    <input type="file" name="filename"/> <br/>
+    <input type="submit" value="上传文件"/><br/>
+    {{ msg }}<br/>
+    <button><a href="./download">下载文件</a></button>
+</form>
+
+</body>
+</html>
